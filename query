@@ -1,0 +1,30 @@
+Query su singola tabelle:
+
+1: SELECT * FROM `ospiti` WHERE `document_type` = 'CI';
+
+2: SELECT * FROM `ospiti` WHERE `date_of_birth` > '1988';
+
+3: SELECT * FROM `ospiti` WHERE `date_of_birth` < '2001';
+
+4: SELECT * FROM `ospiti` WHERE `name` LIKE 'D%';
+
+5: SELECT SUM(price) FROM `pagamenti` WHERE `status` = 'accepted';
+
+6: SELECT MAX(price) FROM `pagamenti`;
+
+7: SELECT * FROM `ospiti` WHERE `document_type` = 'Driver License' AND `date_of_birth` LIKE '1975%';
+
+8: SELECT COUNT(ospite_id) FROM `paganti`;
+
+9: SELECT SUM(beds) FROM `stanze`;
+
+
+Query con GROUP BY :
+
+1: SELECT COUNT(id), YEAR(date_of_birth) FROM `ospiti` GROUP BY YEAR(date_of_birth);
+
+2: SELECT SUM(price), `status` FROM `pagamenti` GROUP BY `status`;
+
+3: SELECT `stanza_id`, COUNT(stanza_id) FROM `prenotazioni` GROUP BY `stanza_id`
+
+4: 
